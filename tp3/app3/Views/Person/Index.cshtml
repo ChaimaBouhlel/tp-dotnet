@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Get person By id";
+}
+
+@model tp3.Models.Person
+
+<h2>Result</h2>
+
+@if (Model == null)
+{
+    <h3>Cet ID est invalide</h3>
+} 
+else
+{
+    <h3>Here is the person with id: @Model.id</h3>
+    <div class="card text-bg-danger mb-3" style="max-width: 18rem;">
+        <div class="card-header">@Model.first_name </div>
+        <div class="card-body">
+            <h5 class="card-title">@Model.first_name @Model.last_name</h5>
+            <p class="card-text">Email: @Model.email</p>
+            <p class="card-text">Image link: @Model.image</p>
+            <p class="card-text">Country: @Model.country</p>
+        </div>
+    </div>
+}
+
+
+
+

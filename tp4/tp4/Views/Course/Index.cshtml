@@ -1,0 +1,22 @@
+﻿@model List<String>
+
+<div style="
+          width: 100%;
+                display: flex;justify-content: space-evenly;
+align-items:center;
+                ">
+    @{
+        foreach (String s in Model)
+        {
+            <a href="Course/GetCourse/@s">
+                <div style="
+                            font-weight:bold;
+                            padding: 3vw;
+                            font-size:3ch;">
+                    @s
+                </div>
+            </a>
+        }
+    }
+
+</div>

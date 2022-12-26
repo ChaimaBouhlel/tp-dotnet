@@ -1,0 +1,24 @@
+﻿@model List<tp4.Models.Student>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">List of students</h1>
+</div>
+@{
+    foreach(Student student in Model)
+    {
+        <div class="card text-bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">@student.first_name </div>
+                <div class="card-body">
+                    <h5 class="card-title">@student.first_name @student.last_name</h5>
+                    <p class="card-text">Phone Number: @student.phone_number</p>
+                    <p class="card-text">University: @student.university</p>
+                    <p class="card-text">Timestamp: @student.timestamp</p>
+                    <p class="card-text">Course: @student.course</p>
+                </div>
+        </div>
+    }
+}

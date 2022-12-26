@@ -1,0 +1,19 @@
+﻿@model List<tp3.Models.Person>
+@{
+    ViewData["Title"] = "All persons";
+}
+<h2>Result</h2>
+@{
+    foreach(Person p in Model)
+    {
+        <div class="card text-bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">@p.first_name </div>
+                <div class="card-body">
+                    <h5 class="card-title">@p.first_name @p.last_name</h5>
+                    <p class="card-text">Email: @p.email</p>
+                    <p class="card-text">Image link: @p.image</p>
+                    <p class="card-text">Country: @p.country</p>
+                </div>
+        </div>
+    }
+}
